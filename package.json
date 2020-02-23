@@ -1,5 +1,5 @@
 {
-  "homepage": "http://patrob.github.io/my-app",
+  "homepage": "http://patrob.github.io",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,8 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
+    "clean-deploy": "(rm -f ../patrob.github.io/*.*) & (rm -rf ../patrob.github.io/static)",
+    "prep-deploy": " cp -rf build/* ../patrob.github.io",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
